@@ -1,6 +1,17 @@
 function balancingParentheses(string) {
   // type your code here
-}
+  let left = 0;
+  let right = 0;
+
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === '(') {
+      ++left;
+    } else {
+      ++right;
+    }
+  }
+    return Math.abs(left - right);
+  }
 
 if (require.main === module) {
   // add your own tests in here
